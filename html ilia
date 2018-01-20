@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta name='description' content='this is my test page thet helps me laern html'>
+      <link rel='stylesheet' href='css file'> 
+    <meta charset="utf-8">
+    <title>the ilia page</title>
+  </head>
+  <body>
+   <h1>test</h1>
+      <p> i really like<strong> teakwondo </strong>its awsome</p>
+      here some more information about <a href='https://en.wikipedia.org/wiki/Taekwondo'
+                                          title='taekwondo wikipidia'
+                                          target='_blank'>taekwondo</a>
+      <p><img src='http://www.martialartsguy.com/wp-content/uploads/2015/04/taekwondo-2.jpg'>
+          <script>var list = document.createElement('ul');
+var info = document.createElement('p');
+var html = document.querySelector('html');
+
+info.textContent = 'Below is a dynamic list. Click anywhere outside the list to add a new list item. Click an existing list item to change its text to something else.';
+
+document.body.appendChild(info);
+document.body.appendChild(list);
+
+html.onclick = function() {
+  var listItem = document.createElement('li');
+  var listContent = prompt('What content do you want the list item to have?');
+  listItem.textContent = listContent;
+  list.appendChild(listItem);
+
+  listItem.onclick = function(e) {
+    e.stopPropagation();
+    var listContent = prompt('Enter new content for your list item');
+    this.textContent = listContent;
+  }
+}</script>
+  </body>
+</html>
